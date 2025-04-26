@@ -1,7 +1,15 @@
 import React from "react";
 import dp from "../assets/dp2.jpg";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 
 const About = () => {
+    const [text] = useTypewriter({
+      words: ["Front-End Developer"],
+      loop: {},
+      typeSpeed: 70,
+      deleteSpeed: 70,
+    });
   return (
     <div className="relative">
 
@@ -9,7 +17,8 @@ const About = () => {
         <img className="object-cover h-25 w-25 rounded-lg " src={dp} alt="" />
         <div className="ps-5">
           <h2 className="text-2xl mt-1 text-[#141414]">Samiudeen</h2>
-          <div className="rounded-md  bordermt-2 mt-2">Frontend Developer</div>
+          <p className="text-[#915eff] font-semibold">{text}<Cursor /></p>
+          {/* <div className="rounded-md  bordermt-2 mt-2">Frontend Developer</div> */}
         </div>
       </div>
 

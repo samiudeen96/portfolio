@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { socialMedia, details, menu } from "../constants";
 
 const MobileNav = ({ setVisible, page }) => {
+
   return (
     <div className="px-5 flex flex-col justify-between h-[calc(100vh-64px)]">
       <div className="flex flex-col mt-5">
@@ -12,7 +13,7 @@ const MobileNav = ({ setVisible, page }) => {
             key={item.name}
             to={item.path}
             onClick={() => setVisible(false)}
-            className={`font-semibold mb-6 text-lg ${
+            className={`mb-6 text-lg ${
               item.path === page ? "text-[#915eff] " : ""
             }`}
           >
