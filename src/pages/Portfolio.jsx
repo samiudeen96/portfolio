@@ -85,7 +85,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <div className="flex gap-5 text-sm">
+      <div className="flex gap-3 text-sm">
         {tabHeader.map((item, index) => (
           <div
             key={index}
