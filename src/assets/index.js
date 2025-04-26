@@ -35,7 +35,7 @@ import jamal from "./jamal.png";
 
 
 import portfolio from "./project/portfolio.png";
-import todo from "./project/todo.png";
+// import todo from "./project/todo.png";
 import collection from "./project/collection.png";
 import hotelGame from "./project/hotelGame.png";
 
@@ -70,7 +70,7 @@ export {
 
   // Project
   portfolio,
-  todo,
+  // todo,
   collection,
   hotelGame,
 

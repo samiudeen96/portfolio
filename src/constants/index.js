@@ -23,7 +23,7 @@ import {
   teams,
   phone,
   location,
-  todo,
+  // todo,
   crescent,
   jamal,
   portfolio
@@ -319,7 +319,7 @@ const projects = [
       },
     ],
     category: "Frontend Development",
-    image: todo,
+    image: '',
     source_code_link: "https://github.com/samiudeen96/todo",
     live_link: "",
   },
