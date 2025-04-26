@@ -10,12 +10,12 @@ const TimelineItem = ({ item, index }) => {
         <p className="text-md timeline-item-title text-[#915eff] font-semibold">
           {item.title}
         </p>
-        <span className="font-semibold">{item.date}</span>
-      </div>
-      <div className="flex items-start justify-between flex-wrap">
         <p className="w-52 md:w-52 lg:w-auto text_gray font-semibold">
           {item.name}
         </p>
+      </div>
+      <div className="flex items-start justify-between flex-wrap">
+        <span className="font-semibold">{item.date}</span>
         <a
           className="text-blue-500 hover:underline cursor-pointer"
           href={item.url}
