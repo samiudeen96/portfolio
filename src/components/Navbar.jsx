@@ -20,14 +20,14 @@ const Navbar = () => {
       <h3 className="sm:px-5 font-bold text-2xl">{`${
         page === "About" ? "About Me" : page
       }`}</h3>
-      <div className="shadow py-3 px-10 rounded-bl-md text-black hidden sm:flex gap-10">
+      <div className="shadow py-3 px-10 rounded-bl-md hidden sm:flex gap-10">
         {menu.map((item) => (
           <Link
             key={item.name}
             to={item.path}
             onClick={() => setPage(item.name)}
             className={`font-semibold ${
-              item.path === location.pathname ? "text-[#915eff] " : ""
+              item.path === location.pathname ? "text-[#915eff] " : "text-[#4a4d53]"
             }`}
           >
             {item.name}

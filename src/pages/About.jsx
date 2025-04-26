@@ -22,7 +22,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="text_gray text-md mt-8">
+      <div className="text_gray text-md sm:mt-0 mt-8">
         <p className=" leading-relaxed">
           I'm a <span className="font-semibold">passionate</span> and
           <span className="font-semibold">
@@ -88,12 +88,6 @@ const About = () => {
                 <li>✔️ React / Angular / Tailwind CSS</li>
                 <li>✔️ UI/UX & Responsive Design</li>
               </ul>
-              {/* <a
-                href="#frontend-projects"
-                className="inline-block px-4 py-2 text-sm font-medium text-white bg-[[#915eff]] rounded-lg hover:bg-[[#915eff]] transition"
-              >
-                View Projects
-              </a> */}
             </div>
           </div>
 
@@ -130,12 +124,6 @@ const About = () => {
                 <li>✔️ Express / MongoDb / MySQL</li>
                 <li>✔️ API Integration & Security</li>
               </ul>
-              {/* <a
-                href="#backend-projects"
-                className="inline-block px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700 transition"
-              >
-                View Projects
-              </a> */}
             </div>
           </div>
         </div>
