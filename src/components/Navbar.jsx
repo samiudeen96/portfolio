@@ -50,7 +50,7 @@ const Navbar = () => {
           }`}
         >
           <div
-            className="flex items-center gap-1 p-5"
+            className="flex items-center gap-1 py-5 px-3"
             onClick={() => setVisible(false)}
           >
             <img src={left_arrow} className="h-5" alt="" />

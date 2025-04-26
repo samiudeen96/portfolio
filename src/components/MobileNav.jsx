@@ -5,14 +5,14 @@ import { socialMedia, details, menu } from "../constants";
 
 const MobileNav = ({ setVisible, page }) => {
   return (
-    <div className="px-5 flex flex-col justify-between">
-      <div className="flex flex-col mt-5 mb-15">
+    <div className="px-5 flex flex-col justify-between h-[calc(100vh-64px)]">
+      <div className="flex flex-col mt-5">
         {menu.map((item) => (
           <Link
             key={item.name}
             to={item.path}
             onClick={() => setVisible(false)}
-            className={`font-semibold mb-6 ${
+            className={`font-semibold mb-6 text-lg ${
               item.path === page ? "text-[#915eff] " : ""
             }`}
           >
@@ -39,7 +39,7 @@ const MobileNav = ({ setVisible, page }) => {
         </div>
 
         <hr className="border border-[#915eff]" />
-        <div className="space-y-4 mt-5">
+        <div className="space-y-4 mt-5 mb-15">
           {details.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               <div className=" w-8 h-8 rounded-md flex justify-center items-center">
@@ -50,8 +50,8 @@ const MobileNav = ({ setVisible, page }) => {
                 />
               </div>
               <div className="">
-                <p className="text-xs">{item.name}</p>
-                <p className="text-xs font-semibold text-[#141414]">
+                <p className="text-sm">{item.name}</p>
+                <p className="text-sm font-semibold text-[#141414]">
                   {item.content}
                 </p>
               </div>
