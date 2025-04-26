@@ -23,10 +23,10 @@ import {
   teams,
   phone,
   location,
-  // todo,
   crescent,
   jamal,
-  portfolio
+  portfolio,
+  todo
 } from "../assets";
 
 //Navbar.jsx
@@ -319,7 +319,7 @@ const projects = [
       },
     ],
     category: "Frontend Development",
-    image: '',
+    image: todo,
     source_code_link: "https://github.com/samiudeen96/todo",
     live_link: "",
   },
