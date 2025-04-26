@@ -10,8 +10,17 @@ const ProjectCard = ({
   source_code_link,
   live_link,
 }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleCardClick = () => {
+    // If desktop, ignore click
+    if (window.innerWidth >= 640) return;
+    // If mobile, toggle overlay
+    setIsClicked(!isClicked);
+  };
+
   return (
-    <div className="group relative">
+    <div className="group relative" onClick={handleCardClick}>
       <div className="rounded-lg sm:w-[340px] w-full overflow-hidden transform transition duration-500 group-hover:scale-105 bg-[#dbdbdb] p-2 cursor-pointer">
         {/* Image */}
         <div className="relative w-full h-[200px] overflow-hidden rounded-lg">
@@ -22,13 +31,21 @@ const ProjectCard = ({
           />
 
           {/* Hover Content Overlay */}
-          <div className="absolute inset-0 bg-white bg-opacity-60 p-4 flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className={`
+            absolute inset-0 bg-white bg-opacity-60 p-4 flex flex-col
+            transition-opacity duration-500
+            ${isClicked ? 'opacity-100' : 'opacity-0'}
+            sm:opacity-0 sm:group-hover:opacity-100
+          `}>
             <div className="flex justify-between items-center">
               <h3 className="font-bold text-[20px] mb-1">{name}</h3>
-              <div className="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="flex justify-end gap-2">
                 {/* GitHub */}
                 <div
-                  onClick={() => window.open(source_code_link, "_blank")}
+                  onClick={(e) => {
+                    e.stopPropagation(); // prevent parent click
+                    window.open(source_code_link, "_blank");
+                  }}
                   className="shadow-md bg-opacity-80 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                 >
                   <img
@@ -40,7 +57,10 @@ const ProjectCard = ({
 
                 {/* Live */}
                 <div
-                  onClick={() => window.open(live_link, "_blank")}
+                  onClick={(e) => {
+                    e.stopPropagation(); // prevent parent click
+                    window.open(live_link, "_blank");
+                  }}
                   className="bg-green-600 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
                 >
                   <img
@@ -65,6 +85,7 @@ const ProjectCard = ({
     </div>
   );
 };
+
 
 const Portfolio = () => {
   const [tab, setTab] = useState("All");
