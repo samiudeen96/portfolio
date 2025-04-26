@@ -1,9 +1,19 @@
 import React from "react";
+import dp from "../assets/dp2.jpg";
 
 const About = () => {
   return (
     <div className="relative">
-      <div className="text_gray text-md">
+
+      <div className="lg:hidden flex items-center">
+        <img className="object-cover h-25 w-25 rounded-lg " src={dp} alt="" />
+        <div className="ps-5">
+          <h2 className="text-2xl mt-1 text-[#141414]">Samiudeen</h2>
+          <div className="rounded-md  bordermt-2 mt-2">Frontend Developer</div>
+        </div>
+      </div>
+
+      <div className="text_gray text-md mt-8">
         <p className=" leading-relaxed">
           I'm a <span className="font-semibold">passionate</span> and
           <span className="font-semibold">
