@@ -46,7 +46,7 @@ const About = () => {
         <p className="mt-10 font-semibold text-lg">What I'm Doing</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
-          <div className="bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 border border-indigo-100 p-8 relative overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-indigo-100 p-8 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-indigo-100 to-white rounded-br-3xl z-0"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-5">
@@ -88,7 +88,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 border border-green-100 p-8 relative overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-300 border border-green-100 p-8 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-green-100 to-white rounded-br-3xl z-0"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-5">
