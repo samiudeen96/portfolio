@@ -39,7 +39,7 @@ const MobileNav = ({ setVisible, page }) => {
         </div>
 
         <hr className="border border-[#915eff]" />
-        <div className="space-y-4 mt-5 mb-15">
+        <div className="space-y-4 mt-5 mb-35">
           {details.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               <div className=" w-8 h-8 rounded-md flex justify-center items-center">
