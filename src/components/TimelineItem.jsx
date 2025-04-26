@@ -10,7 +10,10 @@ const TimelineItem = ({ item, index }) => {
         <p className="text-md timeline-item-title text-[#915eff] font-semibold">
           {item.title}
         </p>
-        <p className="w-52 md:w-52 lg:w-auto text_gray font-semibold">
+        {/* <p className="w-52 md:w-52 lg:w-auto text_gray font-semibold">
+          {item.name}
+        </p> */}
+        <p className="text_gray font-semibold">
           {item.name}
         </p>
       </div>
