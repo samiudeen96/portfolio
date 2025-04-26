@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 
 const TimelineItem = ({ item, index }) => {
   return (
-    <li
-     className="timeline-item">
+    <li className="timeline-item">
       <div className="w-[35px] h-[35px]  absolute -left-11 -top-2 flex justify-center items-center">
         <img src={item.icon} className="w-[22px] h-[22px]" alt="" />
       </div>
@@ -13,8 +12,10 @@ const TimelineItem = ({ item, index }) => {
         </p>
         <span className="font-semibold">{item.date}</span>
       </div>
-      <div className="flex items-center justify-between flex-wrap">
-        <p className="text_gray font-semibold">{item.name}</p>
+      <div className="flex items-start justify-between flex-wrap">
+        <p className="w-52 md:w-52 lg:w-auto text_gray font-semibold">
+          {item.name}
+        </p>
         <a
           className="hover:text-blue-500 hover:underline cursor-pointer"
           href={item.url}
@@ -23,6 +24,7 @@ const TimelineItem = ({ item, index }) => {
           Learn more
         </a>
       </div>
+
       {item.points && (
         <ul className="mt-2 list-disc ml-5 space-y-1">
           {item.points.map((point, index) => (
@@ -35,7 +37,7 @@ const TimelineItem = ({ item, index }) => {
           ))}
         </ul>
       )}
-    </li> 
+    </li>
   );
 };
 
