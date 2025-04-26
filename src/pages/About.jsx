@@ -59,7 +59,7 @@ const About = () => {
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-indigo-100 to-white rounded-br-3xl z-0"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-5">
-                <div className="p-3 bg-indigo-100 text-[[#915eff]] rounded-xl">
+                <div className="p-3 bg-indigo-100 text-[#915eff] rounded-xl">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-6 h-6"
@@ -75,7 +75,7 @@ const About = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[[#915eff]]">
+                <h3 className="text-xl font-bold text-[#915eff]">
                   Frontend Developer
                 </h3>
               </div>
