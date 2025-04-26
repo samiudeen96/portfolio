@@ -20,9 +20,8 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import ilife from "./company/ilife.png";
 import hasnatech from "./company/hasnatech.png";
-import collection from "./collection.png";
-import hotelGame from "./hotelGame.png";
-import todo from "./project/todo.png";
+
+
 
 import WhatsApp from "./whatsapp.svg";
 import linkedin from "./linkedin.svg";
@@ -33,7 +32,12 @@ import phone from "./phone.svg";
 import location from "./location.svg";
 import crescent from "./crescent.png";
 import jamal from "./jamal.png";
+
+
 import portfolio from "./project/portfolio.png";
+import todo from "./project/todo.png";
+import collection from "./project/collection.png";
+import hotelGame from "./project/hotelGame.png";
 
 export {
   // Other
