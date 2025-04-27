@@ -22,7 +22,7 @@ const Contact = () => {
             <input
               type="text"
               name="fullname"
-              className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
+              className="border-[2px] border-[#dbdbdb] p-[15px] flex-1 rounded-md"
               placeholder="Full name"
               required
               data-form-input
@@ -31,7 +31,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
+              className="border-[2px] border-[#dbdbdb] p-[15px] flex-1 rounded-md"
               placeholder="Email address"
               required
               data-form-input
@@ -41,7 +41,7 @@ const Contact = () => {
           <textarea
             name="message"
             rows="5"
-            className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
+            className="border-[2px] border-[#dbdbdb] p-[15px] flex-1 rounded-md"
             placeholder="Your Message"
             required
             data-form-input
