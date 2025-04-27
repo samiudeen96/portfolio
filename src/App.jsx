@@ -12,7 +12,7 @@ const App = () => {
           <Sidebar />
         </div>
 
-        <div className="flex-1 shadow-sm rounded-lg bg-white lg:h-[calc(100vh-40px)] min-h-full overflow-hidden">
+        <div className="flex-1 sm:shadow-sm rounded-lg bg-white lg:h-[calc(100vh-40px)] min-h-full overflow-hidden">
           <Navbar />
           <Content />
         </div>
