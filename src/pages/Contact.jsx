@@ -18,11 +18,11 @@ const Contact = () => {
 
       <section className="">
         <form action="#" className="flex flex-col gap-5" data-form>
-          <div className="flex flex-wrap gap-10">
+          <div className="flex flex-wrap sm:gap-10 gap-5">
             <input
               type="text"
               name="fullname"
-              className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
+              className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
               placeholder="Full name"
               required
               data-form-input
@@ -31,7 +31,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
+              className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
               placeholder="Email address"
               required
               data-form-input
@@ -41,7 +41,7 @@ const Contact = () => {
           <textarea
             name="message"
             rows="5"
-            className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
+            className="border-[2px] border-[#dbdbdb] p-[18px] flex-1 rounded-md"
             placeholder="Your Message"
             required
             data-form-input
