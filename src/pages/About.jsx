@@ -172,30 +172,13 @@ const About = () => {
       </div>
 
       {/* Tech Stack Section */}
-      <motion.div
-        variants={fadeIn("up", 1)}
-        initial="hidden"
-        animate="show"
-        className="mt-10 overflow-hidden"
-      >
+      <div className="mt-10">
         <p className="font-semibold text-lg">Tech Stack</p>
 
-        <div className="relative w-full pt-3">
-          <motion.div
-            className="flex flex-row gap-5"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 10,
-              ease: "linear",
-            }}
-          >
-            {technologies.concat(technologies).map((tech, index) => (
-              <motion.div
-                key={index}
-                className="flex-shrink-0"
-                whileHover={{ scale: 1.1 }}
-              >
+        <div className="relative w-full pt-3 overflow-hidden">
+          <div className="flip_card flex-row gap-5">
+            {[...technologies, ...technologies].map((tech, index) => (
+              <div key={index} className="flex-shrink-0">
                 <div className="group card-container cursor-pointer w-20 p-2">
                   <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
                     <div className="front">
@@ -210,11 +193,11 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

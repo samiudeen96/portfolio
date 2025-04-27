@@ -26,7 +26,7 @@ p {
   font-family: "Lato", sans-serif;
 }
 
-.text_gray{
+.text_gray {
   color: #4a4d53;
 }
 
@@ -86,13 +86,27 @@ p {
   line-height: 1.6;
 }
 
-
-.card-container {
-  @apply perspective-[900px];
+.flip_card {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
 }
 
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+/* .card-container {
+  @apply perspective-[900px];
+} */
+
 .card {
-  @apply relative w-[80px] h-[80px] transition-all duration-500 ease-in-out;
+  @apply relative w-[80px] h-[80px] bg-amber-200 transition-all duration-500 ease-in-out;
   transform-style: preserve-3d;
 }
 
@@ -115,7 +129,6 @@ p {
   transform: rotateY(180deg);
 }
 
-
 .mapbox {
   position: relative;
   height: 250px;
@@ -126,7 +139,9 @@ p {
   overflow: hidden;
 }
 
-.mapbox figure { height: 100%; }
+.mapbox figure {
+  height: 100%;
+}
 
 .mapbox iframe {
   width: 100%;
@@ -134,5 +149,3 @@ p {
   border: none;
   /* filter: grayscale(1) invert(1); */
 }
-
-
