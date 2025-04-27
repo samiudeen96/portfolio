@@ -1,20 +1,25 @@
 import { motion } from "framer-motion";
 
-const TimelineItem = ({ item, index }) => {
+const TimelineItem = ({ item }) => {
   return (
-    <li className="timeline-item">
-      <div className="w-[35px] h-[35px]  absolute -left-11 -top-2 flex justify-center items-center">
+    <motion.li
+      className="timeline-item"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <div className="w-[35px] h-[35px] absolute -left-11 -top-2 flex justify-center items-center">
         <img src={item.icon} className="w-[22px] h-[22px]" alt="" />
       </div>
-      <div className="">
-        {/* <p className="w-52 md:w-52 lg:w-auto text_gray font-semibold">
-          {item.name}
-        </p> */}
+
+      <div>
         <p className="text_gray font-semibold">{item.name}</p>
         <p className="text-md timeline-item-title text-[#915eff] font-semibold">
           {item.title}
         </p>
       </div>
+
       <div className="flex items-start justify-between flex-wrap">
         <span className="font-semibold">{item.date}</span>
         <a
@@ -38,7 +43,7 @@ const TimelineItem = ({ item, index }) => {
           ))}
         </ul>
       )}
-    </li>
+    </motion.li>
   );
 };
 
