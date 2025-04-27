@@ -110,7 +110,7 @@ const About = () => {
           {expIn.map((item) => (
             <motion.div
               key={item.name}
-              className="bg-white rounded-md shadow hover:shadow-lg transition-all duration-300 p-5 relative overflow-hidden"
+              className="bg-white rounded-md  transition-all duration-300 p-5 relative overflow-hidden"
               whileHover={{ scale: 1.03 }}
             >
               <div
