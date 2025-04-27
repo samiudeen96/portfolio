@@ -144,7 +144,7 @@ const expIn = [
         list: "✔️ API Integration & Security",
       },
     ],
-    textColor: "green-700",
+    textColor: "text-green-700",
     borderColor: "border-green-100",
     fromColor: "from-green-100",
     bgColor:"bg-green-100",

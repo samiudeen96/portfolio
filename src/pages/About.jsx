@@ -104,7 +104,7 @@ const About = () => {
                       </svg>
                     )}
                   </div>
-                  <h3 className={`text-xl font-bold text-${item.Color}`}>
+                  <h3 className={`text-xl font-bold ${item.textColor}`}>
                     {item.name}
                   </h3>
                 </div>
