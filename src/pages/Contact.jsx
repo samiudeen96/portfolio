@@ -16,13 +16,13 @@ const Contact = () => {
         </figure>
       </section>
 
-      {/* <section className="contact-form">
-        <form action="#" className="form" data-form>
-          <div className="input-wrapper">
+      <section className="">
+        <form action="#" className="flex flex-col gap-5" data-form>
+          <div className="flex flex-wrap gap-10">
             <input
               type="text"
               name="fullname"
-              className="form-input"
+              className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
               placeholder="Full name"
               required
               data-form-input
@@ -31,7 +31,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="form-input"
+              className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
               placeholder="Email address"
               required
               data-form-input
@@ -40,18 +40,25 @@ const Contact = () => {
 
           <textarea
             name="message"
-            className="form-input"
+            rows="5"
+            className="border-[2px] border-[#dbdbdb] p-2 flex-1 rounded-md"
             placeholder="Your Message"
             required
             data-form-input
           ></textarea>
 
-          <button className="form-btn" type="submit" data-form-btn>
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Message</span>
-          </button>
+          <div className="flex justify-center sm:justify-end">
+            <button
+              className="bg-[#915eff] w-fit text-white p-2 rounded-md cursor-pointer"
+              type="submit"
+              data-form-btn
+            >
+              {/* <ion-icon name="paper-plane"></ion-icon> */}
+              <span>Send Message</span>
+            </button>
+          </div>
         </form>
-      </section> */}
+      </section>
     </section>
   );
 };
