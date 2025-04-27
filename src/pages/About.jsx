@@ -61,15 +61,15 @@ const About = () => {
           {expIn.map((item) => (
             <div
               key={item.name}
-              className={`bg-white rounded-3xl shadow hover:shadow-lg transition-all duration-300 border border-${item.gradientColor} p-5 relative overflow-hidden`}
+              className={`bg-white rounded-3xl shadow hover:shadow-lg transition-all duration-300 border ${item.borderColor} p-5 relative overflow-hidden`}
             >
               <div
-                className={`absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-${item.gradientColor} to-white rounded-br-3xl z-0`}
+                className={`absolute top-0 left-0 w-20 h-20 bg-gradient-to-br ${item.fromColor} to-white rounded-br-3xl z-0`}
               ></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-5">
                   <div
-                    className={`p-3 bg-${item.gradientColor} text-${item.Color} rounded-xl`}
+                    className={`p-3 ${item.bgColor} ${item.textColor} rounded-xl`}
                   >
                     {item.category === "frontend" && (
                       <svg
