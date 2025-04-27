@@ -120,38 +120,39 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-10"> 
+      <div className="mt-10 overflow-hidden">
         <p className="font-semibold text-lg">Tech Stack</p>
-        <div className="flex flex-row flex-wrap justify-center gap-5 pt-3">
-          {technologies.map((tech, index) => (
-            <div key={index}>
-              <div className="group card-container cursor-pointer">
-                <div className="card group-hover:rotate-y-180">
-                  <div className="front">
-                    <motion.div
-                      animate={{
-                        y: index % 2 === 0 ? [0, -3, 0] : [0, 3, 0], // Alternate directions
-                      }}
-                      transition={{
-                        duration: 2, // Time taken for one cycle
-                        repeat: Infinity, // Infinite loop
-                        ease: "easeInOut", // Smooth transition
-                      }}
-                    >
+
+        <div className="relative w-full pt-3">
+          <motion.div
+            className="flex flex-row gap-5"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 50, // Speed (lower = faster)
+              ease: "linear",
+            }}
+          >
+            {/* Duplicate the array to create a seamless loop */}
+            {technologies.concat(technologies).map((tech, index) => (
+              <div key={index} className="flex-shrink-0">
+                <div className="group card-container cursor-pointer w-20">
+                  <div className="card group-hover:rotate-y-180">
+                    <div className="front">
                       <img
                         src={tech.icon}
                         alt={tech.name}
-                        className="w-12 h-12 object-contain"
+                        className="w-12 h-12 object-contain mx-auto"
                       />
-                    </motion.div>
-                  </div>
-                  <div className="back text-center text_gray font-semibold">
-                    {tech.name}
+                    </div>
+                    <div className="back text-center text_gray font-semibold">
+                      {tech.name}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
