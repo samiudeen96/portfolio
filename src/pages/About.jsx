@@ -142,7 +142,7 @@ const About = () => {
                       <img
                         src={tech.icon}
                         alt={tech.name}
-                        className="w-12 h-12 object-contain mx-auto"
+                        className="w-13 h-13 object-contain mx-auto"
                       />
                     </div>
                     <div className="back text-center text_gray font-semibold">
