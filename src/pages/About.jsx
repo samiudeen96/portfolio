@@ -186,7 +186,7 @@ const About = () => {
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               repeat: Infinity,
-              duration: 30,
+              duration: 10,
               ease: "linear",
             }}
           >
