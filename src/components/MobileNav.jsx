@@ -25,17 +25,17 @@ const MobileNav = ({ setVisible, page }) => {
         <div className="social_media flex gap-5 mb-4">
           {socialMedia.map((media, index) => (
             <div
-              key={index}
-              className="shadow-md w-8 h-8 rounded-md flex justify-center items-center hover:bg-slate-300"
-            >
-              <a href={media.url} target="_blank">
-                <img
-                  className={`${media.size || "w-6 h-6"} cursor-pointer`}
-                  src={media.img}
-                  alt=""
-                />
-              </a>
-            </div>
+                key={index}
+                className="shadow-md sm:w-8 sm:h-8 w-12 h-12 rounded-md flex justify-center items-center hover:bg-slate-300"
+              >
+                <a href={media.url} target="_blank">
+                  <img
+                    className={`${media.size || "sm:w-6 sm:h-6 w-10 h-10"} cursor-pointer`}
+                    src={media.img}
+                    alt=""
+                  />
+                </a>
+              </div>
           ))}
         </div>
 
