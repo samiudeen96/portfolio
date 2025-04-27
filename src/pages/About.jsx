@@ -136,8 +136,8 @@ const About = () => {
             {/* Duplicate the array to create a seamless loop */}
             {technologies.concat(technologies).map((tech, index) => (
               <div key={index} className="flex-shrink-0">
-                <div className="group card-container cursor-pointer w-20">
-                  <div className="card group-hover:rotate-y-180">
+                <div className="group card-container cursor-pointer w-20  p-2">
+                  <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
                     <div className="front">
                       <img
                         src={tech.icon}
