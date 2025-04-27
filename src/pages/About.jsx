@@ -4,6 +4,26 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { expIn, technologies } from "../constants";
 import { motion } from "framer-motion";
 
+const fadeIn = (direction = "up", delay = 0) => {
+  return {
+    hidden: {
+      opacity: 0,
+      y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
+      x: direction === "left" ? 40 : direction === "right" ? -40 : 0,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        type: "spring",
+        duration: 1,
+        delay,
+      },
+    },
+  };
+};
+
 const About = () => {
   const [text] = useTypewriter({
     words: ["Front-End Developer"],
@@ -11,21 +31,37 @@ const About = () => {
     typeSpeed: 70,
     deleteSpeed: 70,
   });
+
   return (
     <div className="relative">
-      <div className="lg:hidden flex items-center">
-        <img className="object-cover h-25 w-25 rounded-lg " src={dp} alt="" />
+      {/* Mobile Profile Section */}
+      <motion.div
+        className="lg:hidden flex items-center"
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        animate="show"
+      >
+        <img
+          className="object-cover h-25 w-25 rounded-lg"
+          src={dp}
+          alt="Profile"
+        />
         <div className="ps-5">
           <h2 className="text-2xl mt-1 text-[#141414]">Samiudeen</h2>
           <p className="text-[#915eff] font-semibold">
             {text}
             <Cursor />
           </p>
-          {/* <div className="rounded-md  bordermt-2 mt-2">Frontend Developer</div> */}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="text_gray text-md sm:mt-0 mt-8">
+      {/* About Text Section */}
+      <motion.div
+        className="text_gray text-md sm:mt-0 mt-8"
+        variants={fadeIn("up", 0.4)}
+        initial="hidden"
+        animate="show"
+      >
         <p className=" leading-relaxed">
           I'm a <span className="font-semibold">passionate</span> and
           <span className="font-semibold">
@@ -52,16 +88,30 @@ const About = () => {
           development, and have successfully implemented secure and engaging
           applications like e-commerce platforms and gamified learning systems.
         </p>
-      </div>
+      </motion.div>
 
+      {/* What I'm Doing */}
       <div className="mt-10">
-        <p className=" font-semibold text-lg">What I'm Doing</p>
+        <motion.p
+          className="font-semibold text-lg"
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          animate="show"
+        >
+          What I'm Doing
+        </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-10 gap-5 mt-3">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 sm:gap-10 gap-5 mt-3"
+          variants={fadeIn("up", 0.8)}
+          initial="hidden"
+          animate="show"
+        >
           {expIn.map((item) => (
-            <div
+            <motion.div
               key={item.name}
-              className={`bg-white rounded-md shadow hover:shadow-lg transition-all duration-300 p-5 relative overflow-hidden`}
+              className="bg-white rounded-md shadow hover:shadow-lg transition-all duration-300 p-5 relative overflow-hidden"
+              whileHover={{ scale: 1.03 }}
             >
               <div
                 className={`absolute top-0 left-0 w-20 h-20 bg-gradient-to-br ${item.fromColor} to-white rounded-br-md z-0`}
@@ -71,6 +121,7 @@ const About = () => {
                   <div
                     className={`p-3 ${item.bgColor} ${item.textColor} rounded-xl`}
                   >
+                    {/* Icons based on category */}
                     {item.category === "frontend" && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -115,28 +166,37 @@ const About = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="mt-10 overflow-hidden">
+      {/* Tech Stack Section */}
+      <motion.div
+        variants={fadeIn("up", 1)}
+        initial="hidden"
+        animate="show"
+        className="mt-10 overflow-hidden"
+      >
         <p className="font-semibold text-lg">Tech Stack</p>
 
         <div className="relative w-full pt-3">
           <motion.div
             className="flex flex-row gap-5"
-            animate={{ x: ["0%", "-100%"] }}
+            animate={{ x: ["0%", "-50%"] }}
             transition={{
               repeat: Infinity,
-              duration: 20, // Speed (lower = faster)
+              duration: 30,
               ease: "linear",
             }}
           >
-            {/* Duplicate the array to create a seamless loop */}
             {technologies.concat(technologies).map((tech, index) => (
-              <div key={index} className="flex-shrink-0">
-                <div className="group card-container cursor-pointer w-20  p-2">
+              <motion.div
+                key={index}
+                className="flex-shrink-0"
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="group card-container cursor-pointer w-20 p-2">
                   <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
                     <div className="front">
                       <img
@@ -150,11 +210,11 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

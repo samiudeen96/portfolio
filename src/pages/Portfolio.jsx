@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { projects } from "../constants";
 import { github, live } from "../assets";
 
+import { motion } from "framer-motion";
+
 const ProjectCard = ({
   name,
   description,
@@ -13,14 +15,18 @@ const ProjectCard = ({
   const [isClicked, setIsClicked] = useState(false);
 
   const handleCardClick = () => {
-    // If desktop, ignore click
     if (window.innerWidth >= 640) return;
-    // If mobile, toggle overlay
     setIsClicked(!isClicked);
   };
 
   return (
-    <div className="group relative" onClick={handleCardClick}>
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      className="group relative"
+      onClick={handleCardClick}
+    >
       <div className="rounded-lg sm:w-[340px] w-full overflow-hidden transform transition duration-500 group-hover:scale-105 bg-[#dbdbdb] p-2 cursor-pointer">
         {/* Image */}
         <div className="relative w-full h-[200px] overflow-hidden rounded-lg">
@@ -43,7 +49,7 @@ const ProjectCard = ({
                 {/* GitHub */}
                 <div
                   onClick={(e) => {
-                    e.stopPropagation(); // prevent parent click
+                    e.stopPropagation();
                     window.open(source_code_link, "_blank");
                   }}
                   className="shadow-md bg-opacity-80 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
@@ -58,7 +64,7 @@ const ProjectCard = ({
                 {/* Live */}
                 <div
                   onClick={(e) => {
-                    e.stopPropagation(); // prevent parent click
+                    e.stopPropagation();
                     window.open(live_link, "_blank");
                   }}
                   className="bg-green-600 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
@@ -82,9 +88,10 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 
 
 const Portfolio = () => {
