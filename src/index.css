@@ -106,7 +106,7 @@ p {
 } */
 
 .card {
-  @apply relative w-[80px] h-[80px] bg-amber-200 transition-all duration-500 ease-in-out;
+  @apply relative w-[80px] h-[80px] transition-all duration-500 ease-in-out;
   transform-style: preserve-3d;
 }
 
