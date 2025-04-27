@@ -1,6 +1,8 @@
 import React from "react";
 import dp from "../assets/dp2.jpg";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { expIn, technologies } from "../constants";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [text] = useTypewriter({
@@ -52,17 +54,17 @@ const About = () => {
         </p>
       </div>
 
-      <div className="">
-        <p className="mt-10 font-semibold text-lg">What I'm Doing</p>
+      <div className="mt-10">
+        <p className=" font-semibold text-lg">What I'm Doing</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-10 gap-5 mt-3">
           {expIn.map((item) => (
             <div
               key={item.name}
-              className={`bg-white rounded-3xl shadow hover:shadow-lg transition-all duration-300 border border-${item.gradientColor} p-6 relative overflow-hidden`}
+              className={`bg-white rounded-3xl shadow hover:shadow-lg transition-all duration-300 border border-${item.gradientColor} p-5 relative overflow-hidden`}
             >
               <div
-                className={`absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-${item.gradientColor} to-white rounded-br-3xl z-0`}
+                className={`absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-${item.gradientColor} to-white rounded-br-3xl z-0`}
               ></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-5">
@@ -87,19 +89,19 @@ const About = () => {
                     )}
                     {item.category === "fullstack" && (
                       <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 7h18M3 12h18m-6 5H3"
-                      />
-                    </svg>
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 7h18M3 12h18m-6 5H3"
+                        />
+                      </svg>
                     )}
                   </div>
                   <h3 className={`text-xl font-bold text-${item.Color}`}>
@@ -117,47 +119,43 @@ const About = () => {
           ))}
         </div>
       </div>
+
+      <div className="mt-10"> 
+        <p className="font-semibold text-lg">Tech Stack</p>
+        <div className="flex flex-row flex-wrap justify-center gap-5 pt-3">
+          {technologies.map((tech, index) => (
+            <div key={index}>
+              <div className="group card-container cursor-pointer">
+                <div className="card group-hover:rotate-y-180">
+                  <div className="front">
+                    <motion.div
+                      animate={{
+                        y: index % 2 === 0 ? [0, -3, 0] : [0, 3, 0], // Alternate directions
+                      }}
+                      transition={{
+                        duration: 2, // Time taken for one cycle
+                        repeat: Infinity, // Infinite loop
+                        ease: "easeInOut", // Smooth transition
+                      }}
+                    >
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-12 h-12 object-contain"
+                      />
+                    </motion.div>
+                  </div>
+                  <div className="back text-center text_gray font-semibold">
+                    {tech.name}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
-
-const expIn = [
-  {
-    name: "Front-end Developer",
-    desc: "I design and build beautiful, responsive interfaces with a focus on performance and accessibility.",
-    points: [
-      {
-        list: "✔️ HTML / CSS / JavaScript",
-      },
-      {
-        list: "✔️ React / Angular / Tailwind CSS",
-      },
-      {
-        list: "✔️ UI/UX & Responsive Design",
-      },
-    ],
-    Color: "[#915eff]",
-    gradientColor: "indigo-100",
-    category: "frontend",
-  },
-  {
-    name: "Full-stack Developer",
-    desc: "I design and build beautiful, responsive interfaces with a focus on performance and accessibility.",
-    points: [
-      {
-        list: "✔️ HTML / CSS / JavaScript",
-      },
-      {
-        list: "✔️ React / Angular / Tailwind CSS",
-      },
-      {
-        list: "✔️ UI/UX & Responsive Design",
-      },
-    ],
-    Color: "green-700",
-    gradientColor: "green-100",
-    category: "fullstack",
-  },
-];
 
 export default About;

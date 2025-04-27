@@ -10,6 +10,7 @@ import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
+import mysql from "./tech/mysql.svg";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import angular from "./tech/angular.png";
@@ -58,6 +59,7 @@ export {
   css,
   javascript,
   mongodb,
+  mysql,
   nodejs,
   reactjs,
   angular,

@@ -26,7 +26,8 @@ import {
   crescent,
   jamal,
   portfolio,
-  todo
+  todo,
+  mysql
 } from "../assets";
 
 //Navbar.jsx
@@ -107,6 +108,47 @@ const services = [
   },
 ];
 
+
+const expIn = [
+  {
+    name: "Front-end Developer",
+    desc: "I design and build beautiful, responsive interfaces with a focus on performance and accessibility.",
+    points: [
+      {
+        list: "✔️ HTML / CSS / JavaScript / TypeScript",
+      },
+      {
+        list: "✔️ React / Angular / Tailwind CSS",
+      },
+      {
+        list: "✔️ UI/UX & Responsive Design",
+      },
+    ],
+    Color: "[#915eff]",
+    gradientColor: "indigo-100",
+    category: "frontend",
+  },
+  {
+    name: "Full-stack Developer",
+    desc: "I build robust backend systems, APIs, and database structures that power modern web applications.",
+    points: [
+      {
+        list: "✔️ Node.js",
+      },
+      {
+        list: "✔️ Express / MongoDb / MySQL",
+      },
+      {
+        list: "✔️ API Integration & Security",
+      },
+    ],
+    Color: "green-700",
+    gradientColor: "green-100",
+    category: "fullstack",
+  },
+];
+
+
 const technologies = [
   {
     name: "HTML 5",
@@ -151,6 +193,10 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
   },
   {
     name: "Three JS",
@@ -333,5 +379,6 @@ export {
   menu,
   socialMedia,
   details,
-  education
+  education,
+  expIn
 };
