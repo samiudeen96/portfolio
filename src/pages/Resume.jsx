@@ -1,12 +1,10 @@
+
+
 import React from "react";
 import TimelineItem from "../components/TimelineItem";
 import { experiences, education } from "../constants";
 import exp from "../assets/exp.svg";
-// import edu from '../assets/edu.svg'
-import degree from "../assets/degree.svg";
 import degree1 from "../assets/degree1.svg";
-
-
 import { motion } from "framer-motion";
 
 const Resume = () => {
@@ -16,14 +14,7 @@ const Resume = () => {
       {/* Experience Timeline */}
       <div className="timeline relative">
         {/* Animated Line */}
-        <motion.div
-          className="absolute left-4 top-7 w-[2px] bg-gray-300"
-          initial={{ height: 0 }}
-          animate={{ height: "100%" }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        />
 
-        {/* Timeline Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,18 +37,11 @@ const Resume = () => {
       {/* Education Timeline */}
       <div className="timeline mt-10 relative">
         {/* Animated Line */}
-        <motion.div
-          className="absolute left-4 top-7 w-[2px] bg-gray-300"
-          initial={{ height: 0 }}
-          animate={{ height: "100%" }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        />
 
-        {/* Timeline Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 2, duration: 0.8, ease: "easeOut" }}
         >
           <div className="title-wrapper">
             <div className="w-[35px] h-[35px] rounded-md flex justify-center items-center">
@@ -78,4 +62,3 @@ const Resume = () => {
 };
 
 export default Resume;
-
