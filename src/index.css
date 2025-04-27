@@ -73,7 +73,7 @@ p {
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
-  top: -31px;
+  top: -32px;
   left: -27.5px;
   width: 3px;
   height: calc(100% + 50px);
