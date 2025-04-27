@@ -172,7 +172,12 @@ const About = () => {
       </div>
 
       {/* Tech Stack Section */}
-      <div className="mt-10">
+      <motion.div
+        variants={fadeIn("up", 0.8)}
+        initial="hidden"
+        animate="show"
+        className="mt-10"
+      >
         <p className="font-semibold text-lg">Tech Stack</p>
 
         <div className="relative w-full pt-3 overflow-hidden">
@@ -197,7 +202,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

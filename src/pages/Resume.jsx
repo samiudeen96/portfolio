@@ -18,7 +18,7 @@ const Resume = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
         >
           <div className="title-wrapper">
             <div className="w-[35px] h-[35px] rounded-md flex justify-center items-center">
