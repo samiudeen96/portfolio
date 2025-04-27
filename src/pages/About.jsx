@@ -129,7 +129,7 @@ const About = () => {
             animate={{ x: ["0%", "-100%"] }}
             transition={{
               repeat: Infinity,
-              duration: 30, // Speed (lower = faster)
+              duration: 20, // Speed (lower = faster)
               ease: "linear",
             }}
           >
