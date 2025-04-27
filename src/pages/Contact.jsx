@@ -6,7 +6,7 @@ const Contact = () => {
     <section className="flex flex-col">
       {/* Map Section */}
       <motion.section
-        className="mapbox"
+        className="mapbox rounded-md"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -19,7 +19,7 @@ const Contact = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full rounded-lg shadow-md"
+            className="w-full rounded-md shadow-md"
           ></iframe>
         </figure>
       </motion.section>
