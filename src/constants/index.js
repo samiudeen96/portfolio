@@ -66,19 +66,19 @@ const socialMedia = [
     img: gmail,
     size: "sm:w-7 sm:h-7 w-10 h-10",
     url: "mailto:samiudeen96amm@gmail.com",
-    type:""
+    type:"mail"
   },
   {
     img: teams,
     size: "sm:w-7 sm:h-7 w-10 h-10",
-    url: "https://teams.microsoft.com/l/chat/0/0?users=samiudeen96amm@outlook.com",
-    type:""
+    url: "https://teams.microsoft.com/l/chat/0/0?users=samiudeen96@outlook.com",
+    type: "chat"
   },
   {
     img: WhatsApp,
     size: "sm:w-7 sm:h-7 w-10 h-10",
     url: "https://wa.me/918148837858",
-    type:""
+    type:"chat"
   },
 ];
 
