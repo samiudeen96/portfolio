@@ -1,16 +1,21 @@
 import React from "react";
 import dp from "../assets/dp2.jpg";
+import { Cursor } from "react-simple-typewriter";
 
 import { socialMedia, details } from "../constants";
 
-const Sidebar = () => {
+const Sidebar = ({ text }) => {
   return (
     <div className="fixed top-5 md:h-[calc(100vh-40px)] w-60">
       <div className="h-full px-5 py-10 flex flex-col justify-between shadow-sm rounded-lg bg-white">
         <div className="flex flex-col items-center">
           <img className="object-cover h-30 w-30 rounded-lg " src={dp} alt="" />
           <h2 className="text-2xl mt-1 text-[#141414]">Samiudeen</h2>
-          <div className="rounded-md px-2 bordermt-2">Frontend Developer</div>
+          {/* <div className="rounded-md px-2 bordermt-2">{text}r</div> */}
+          <p className="text-[#915eff] font-semibold">
+            {text}
+            <Cursor />
+          </p>
         </div>
 
         <div>

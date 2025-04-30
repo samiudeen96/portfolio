@@ -5,7 +5,7 @@ import menu_icon from "../assets/menu_icon.png";
 import left_arrow from "../assets/left_arrow.svg";
 import MobileNav from "./MobileNav";
 // import Sidebar from "../components/Sidebar"
-const Navbar = () => {
+const Navbar = ({text}) => {
   const [page, setPage] = useState("");
   const location = useLocation();
   const [visible, setVisible] = useState(false);

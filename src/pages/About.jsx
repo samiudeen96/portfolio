@@ -1,6 +1,6 @@
 import React from "react";
 import dp from "../assets/dp2.jpg";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import {Cursor } from "react-simple-typewriter";
 import { expIn, technologies } from "../constants";
 import { motion } from "framer-motion";
 
@@ -24,13 +24,8 @@ const fadeIn = (direction = "up", delay = 0) => {
   };
 };
 
-const About = () => {
-  const [text] = useTypewriter({
-    words: ["Front-End Developer"],
-    loop: {},
-    typeSpeed: 70,
-    deleteSpeed: 70,
-  });
+const About = ({text}) => {
+
 
   return (
     <div className="relative">
