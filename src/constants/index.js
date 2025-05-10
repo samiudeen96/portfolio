@@ -28,7 +28,7 @@ import {
   portfolio,
   expTracker,
   todo,
-  mysql
+  mysql,
 } from "../assets";
 
 //Navbar.jsx
@@ -56,30 +56,30 @@ const socialMedia = [
   {
     img: linkedin,
     url: "https://www.linkedin.com/in/samiudeen/",
-    type:"link"
+    type: "link",
   },
   {
     img: github,
     url: "https://github.com/samiudeen96",
-    type:"link"
+    type: "link",
   },
   {
     img: gmail,
     size: "sm:w-7 sm:h-7 w-10 h-10",
     url: "mailto:samiudeen96amm@gmail.com",
-    type:"mail"
+    type: "mail",
   },
   {
     img: teams,
     size: "sm:w-7 sm:h-7 w-10 h-10",
     url: "https://teams.microsoft.com/l/chat/0/0?users=samiudeen96@outlook.com",
-    type: "chat"
+    type: "chat",
   },
   {
     img: WhatsApp,
     size: "sm:w-7 sm:h-7 w-10 h-10",
     url: "https://wa.me/918148837858",
-    type:"chat"
+    type: "chat",
   },
 ];
 
@@ -109,7 +109,6 @@ const services = [
   },
 ];
 
-
 const expIn = [
   {
     name: "Front-end Developer",
@@ -128,7 +127,7 @@ const expIn = [
     textColor: "text-[#915eff]",
     borderColor: "border-indigo-100",
     fromColor: "from-indigo-100",
-    bgColor:"bg-indigo-100",
+    bgColor: "bg-indigo-100",
     category: "frontend",
   },
   {
@@ -148,11 +147,10 @@ const expIn = [
     textColor: "text-green-700",
     borderColor: "border-green-100",
     fromColor: "from-green-100",
-    bgColor:"bg-green-100",
+    bgColor: "bg-green-100",
     category: "fullstack",
   },
 ];
-
 
 const technologies = [
   {
@@ -252,7 +250,7 @@ const experiences = [
   },
 ];
 
-const education =[
+const education = [
   {
     id: 1,
     title: "Master of Computer Application (MCA)",
@@ -271,13 +269,13 @@ const education =[
     iconBg: "#E6DEDD",
     date: "Apr 2014 - Dec 2017",
   },
-]
+];
 
 const projects = [
-    {
+  {
     name: "Expense Tracker",
     description:
-      "Web-based platform for buying and selling products or services. It includes features like product listings, shopping carts, secure payments, and order management.",
+      "Built a finance tracking app to manage income and expenses with real-time balance updates and category-wise summaries.",
     tags: [
       {
         name: "react",
@@ -412,5 +410,5 @@ export {
   socialMedia,
   details,
   education,
-  expIn
+  expIn,
 };
