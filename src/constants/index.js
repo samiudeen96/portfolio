@@ -296,8 +296,8 @@ const projects = [
     ],
     category: "FullStack Development",
     image: expTracker,
-    source_code_link: "https://github.com/samiudeen96/collection",
-    live_link: "https://collection-plum.vercel.app/",
+    source_code_link: "https://github.com/samiudeen96/ExpenseTracker",
+    live_link: "https://expensetracker-samiudeen.vercel.app/",
   },
   {
     name: "Ecommerce",
