@@ -1,6 +1,6 @@
 import React from "react";
 import dp from "../assets/dp2.jpg";
-import {Cursor } from "react-simple-typewriter";
+import { Cursor } from "react-simple-typewriter";
 import { expIn, technologies } from "../constants";
 import { motion } from "framer-motion";
 
@@ -24,7 +24,7 @@ const fadeIn = (direction = "up", delay = 0) => {
   };
 };
 
-const About = ({text}) => {
+const About = ({ text }) => {
 
 
   return (
@@ -175,7 +175,7 @@ const About = ({text}) => {
       >
         <p className="font-semibold text-lg">Tech Stack</p>
 
-        <div className="relative w-full pt-3 overflow-hidden">
+        {/* <div className="relative w-full pt-3 overflow-hidden">
           <div className="flip_card flex-row gap-5">
             {[...technologies, ...technologies].map((tech, index) => (
               <div key={index} className="flex-shrink-0">
@@ -196,7 +196,45 @@ const About = ({text}) => {
               </div>
             ))}
           </div>
+        </div> */}
+
+        <div className="pt-3">
+          <div className="flip_card flex flex-wrap gap-5">
+            {technologies.map((tech, index) => (
+              <div key={index} className="flex">
+                <div className="group card-container cursor-pointer w-20 p-2">
+                  <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
+                    {/* <div className="front">
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-13 h-13 object-contain mx-auto"
+                      />
+                    </div> */}
+                    <div className="front">
+                      <motion.div
+                        animate={{
+                          y: index % 2 === 0 ? [0, -3, 0] : [0, 3, 0], // Alternate directions
+                        }}
+                        transition={{
+                          duration: 2, // Time taken for one cycle
+                          repeat: Infinity, // Infinite loop
+                          ease: "easeInOut", // Smooth transition
+                        }}
+                      >
+                        <img src={tech.icon} alt={tech.name} className="w-13 h-13 object-contain" />
+                      </motion.div>
+                    </div>
+                    <div className="back text-center text_gray font-semibold">
+                      {tech.name}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
       </motion.div>
     </div>
   );

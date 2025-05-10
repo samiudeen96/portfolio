@@ -86,7 +86,7 @@ p {
   line-height: 1.6;
 }
 
-.flip_card {
+/* .flip_card {
   display: flex;
   width: max-content;
   animation: scroll 20s linear infinite;
@@ -99,7 +99,7 @@ p {
   100%{
     transform: translateX(-50%);
   }
-}
+} */
 
 /* .card-container {
   @apply perspective-[900px];
