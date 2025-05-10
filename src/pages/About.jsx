@@ -198,7 +198,7 @@ const About = ({ text }) => {
           </div>
         </div> */}
 
-        <div className="pt-3">
+        <div className="pt-3 mb-5">
           <div className="flip_card flex flex-wrap gap-5 justify-center">
             {technologies.map((tech, index) => (
               <div key={index} className="flex">

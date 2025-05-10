@@ -26,6 +26,7 @@ import {
   crescent,
   jamal,
   portfolio,
+  expTracker,
   todo,
   mysql
 } from "../assets";
@@ -273,6 +274,33 @@ const education =[
 ]
 
 const projects = [
+    {
+    name: "Expense Tracker",
+    description:
+      "Web-based platform for buying and selling products or services. It includes features like product listings, shopping carts, secure payments, and order management.",
+    tags: [
+      {
+        name: "react",
+        color: "text-blue-400",
+      },
+      {
+        name: "tailwind",
+        color: "text-blue-500",
+      },
+      {
+        name: "node.js",
+        color: "text-green-500",
+      },
+      {
+        name: "MySQL",
+        color: "text-blue-900",
+      },
+    ],
+    category: "FullStack Development",
+    image: expTracker,
+    source_code_link: "https://github.com/samiudeen96/collection",
+    live_link: "https://collection-plum.vercel.app/",
+  },
   {
     name: "Ecommerce",
     description:

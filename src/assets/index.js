@@ -39,6 +39,7 @@ import portfolio from "./project/portfolio.png";
 import todo from "./project/todo.png";
 import collection from "./project/collection.png";
 import hotelGame from "./project/hotelGame.png";
+import expTracker from "./project/expTracker.png"
 
 export {
   // Other
@@ -75,6 +76,7 @@ export {
   todo,
   collection,
   hotelGame,
+  expTracker,
 
   // Company
   ilife,

@@ -1,98 +1,15 @@
-import React, { useEffect, useState } from "react";
+// pages/Portfolio.jsx
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { projects } from "../constants";
-import { github, live } from "../assets";
 
-import { motion } from "framer-motion";
+// Lazy load ProjectCard
+const ProjectCard = lazy(() => import("../components/ProjectCard"));
 
-const ProjectCard = ({
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-  live_link,
-}) => {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleCardClick = () => {
-    if (window.innerWidth >= 640) return;
-    setIsClicked(!isClicked);
-  };
-
-  return (
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 100, damping: 10 }}
-      className="group relative"
-      onClick={handleCardClick}
-    >
-      <div className="rounded-lg sm:w-[340px] w-full overflow-hidden transform transition duration-500 group-hover:scale-105 bg-[#dbdbdb] p-2 cursor-pointer">
-        {/* Image */}
-        <div className="relative w-full h-[200px] overflow-hidden rounded-lg">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover transition duration-500"
-          />
-
-          {/* Hover Content Overlay */}
-          <div className={`
-            absolute inset-0 bg-white bg-opacity-60 p-4 flex flex-col
-            transition-opacity duration-500
-            ${isClicked ? 'opacity-100' : 'opacity-0'}
-            sm:opacity-0 sm:group-hover:opacity-100
-          `}>
-            <div className="flex justify-between items-center">
-              <h3 className="font-bold text-[20px] mb-1">{name}</h3>
-              <div className="flex justify-end gap-2">
-                {/* GitHub */}
-                <div
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(source_code_link, "_blank");
-                  }}
-                  className="shadow-md bg-opacity-80 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
-                >
-                  <img
-                    src={github}
-                    alt="github"
-                    className="w-1/2 h-1/2 object-contain"
-                  />
-                </div>
-
-                {/* Live */}
-                <div
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(live_link, "_blank");
-                  }}
-                  className="bg-green-600 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
-                >
-                  <img
-                    src={live}
-                    alt="live"
-                    className="w-1/2 h-1/2 object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-            <p className="text-sm my-2">{description}</p>
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <p key={tag.name} className={`text-[14px] font-semibold ${tag.color}`}>
-                  #{tag.name}
-                </p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-
+const tabHeader = [
+  { name: "All" },
+  { name: "Frontend Development" },
+  { name: "FullStack Development" },
+];
 
 const Portfolio = () => {
   const [tab, setTab] = useState("All");
@@ -102,17 +19,16 @@ const Portfolio = () => {
     if (tab === "All") {
       setContent(projects);
     } else {
-      const filteredTabName = projects.filter((item) => item.category === tab);
-      setContent(filteredTabName);
+      const filtered = projects.filter((item) => item.category === tab);
+      setContent(filtered);
     }
   }, [tab]);
 
-  const onTabHandler = (tabName) => {
-    setTab(tabName.name);
-  };
+  const onTabHandler = (tabItem) => setTab(tabItem.name);
 
   return (
     <div>
+      {/* Tabs */}
       <div className="flex gap-3 text-sm">
         {tabHeader.map((item, index) => (
           <div
@@ -127,25 +43,20 @@ const Portfolio = () => {
         ))}
       </div>
 
+      {/* Project Cards */}
       <div className="mt-5 flex flex-wrap gap-7 pb-10">
-        {content.map((project, index) => (
-          <ProjectCard key={`project ${index}`} {...project} />
-        ))}
+        <Suspense fallback={<p>Loading projects...</p>}>
+          {content.length === 0 ? (
+            <p>No projects found.</p>
+          ) : (
+            content.map((project, index) => (
+              <ProjectCard key={`project-${index}`} {...project} />
+            ))
+          )}
+        </Suspense>
       </div>
     </div>
   );
 };
-
-const tabHeader = [
-  {
-    name: "All",
-  },
-  {
-    name: "Frontend Development",
-  },
-  {
-    name: "FullStack Development",
-  },
-];
 
 export default Portfolio;
