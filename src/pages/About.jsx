@@ -199,10 +199,10 @@ const About = ({ text }) => {
         </div> */}
 
         <div className="pt-3">
-          <div className="flip_card flex flex-wrap gap-5">
+          <div className="flip_card flex flex-wrap gap-5 justify-center">
             {technologies.map((tech, index) => (
               <div key={index} className="flex">
-                <div className="group card-container cursor-pointer w-20 p-2">
+                <div className="group card-container cursor-pointer">
                   <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
                     {/* <div className="front">
                       <img
@@ -222,7 +222,7 @@ const About = ({ text }) => {
                           ease: "easeInOut", // Smooth transition
                         }}
                       >
-                        <img src={tech.icon} alt={tech.name} className="w-13 h-13 object-contain" />
+                        <img src={tech.icon} alt={tech.name} className="w-11 h-11 object-contain" />
                       </motion.div>
                     </div>
                     <div className="back text-center text_gray font-semibold">
