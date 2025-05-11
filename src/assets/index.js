@@ -1,5 +1,6 @@
 import logo from "/logo.svg";
 import vercel from "./tech/vercel.png";
+import railway from "./tech/railway.png";
 import live from "./live.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -54,6 +55,7 @@ export {
   git,
   github,
   vercel,
+  railway,
 
   // Tech Stack
   html,

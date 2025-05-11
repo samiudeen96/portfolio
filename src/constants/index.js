@@ -29,6 +29,7 @@ import {
   expTracker,
   todo,
   mysql,
+  railway
 } from "../assets";
 
 //Navbar.jsx
@@ -162,6 +163,14 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -182,14 +191,6 @@ const technologies = [
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -206,12 +207,16 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "github",
+    name: "Github",
     icon: github,
   },
   {
     name: "Vercel",
     icon: vercel,
+  },
+    {
+    name: "Railway",
+    icon: railway,
   },
 ];
 
