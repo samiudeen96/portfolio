@@ -131,12 +131,13 @@ p {
 
 .mapbox {
   position: relative;
-  height: 250px;
+  height: 220px;
   width: 100%;
   /* border-radius: 16px; */
   margin-bottom: 30px;
   border: 1px solid var(--jet);
   overflow: hidden;
+  
 }
 
 .mapbox figure {

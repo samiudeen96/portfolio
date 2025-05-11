@@ -33,7 +33,7 @@ const ProjectCard = ({
             src={image}
             alt={name}
             loading="lazy"
-            className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
+            className="w-full h-full object-cover transition duration-300 group-hover:scale-110 relative"
           />
           <div className={`absolute inset-0 bg-white bg-opacity-60 transition-opacity duration-300  p-5 flex flex-col justify-between ${
             isClicked ? "opacity-100" : "opacity-0"

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Resume = () => {
   return (
-    <div className="relative">
+    <div className="relative text_gray">
 
       {/* Experience Timeline */}
       <div className="timeline relative">
