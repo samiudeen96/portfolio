@@ -23,7 +23,7 @@ const Sidebar = ({ text }) => {
             {socialMedia.map((media, index) => (
               <div
                 key={index}
-                className="shadow-md w-8 h-8 rounded-md flex justify-center items-center hover:bg-slate-300"
+                className="shadow-sm w-8 h-8 rounded-md flex justify-center items-center hover:bg-slate-300"
               >
                 <a href={media.url} target="_blank">
                   <img
