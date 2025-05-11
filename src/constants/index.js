@@ -280,7 +280,7 @@ const projects = [
   {
     name: "Expense Tracker",
     description:
-      "Built a finance tracking app to manage income and expenses with real-time balance updates and category-wise summaries.",
+      "Built a finance tracking app to manage income and expenses with real-time balance updates. Included category-wise summaries for better financial insights.",
     tags: [
       {
         name: "react",
@@ -357,7 +357,7 @@ const projects = [
   {
     name: "3D Portfolio",
     description:
-      "An immersive 3D portfolio experience by Samiudeen, blending modern web technologies with interactive design to showcase development skills and personal projects.",
+      "Created an immersive 3D portfolio experience that blends modern web technologies with interactive design. Showcases development skills and personal projects by Samiudeen.",
     tags: [
       {
         name: "react",
@@ -384,7 +384,7 @@ const projects = [
   {
     name: "ToDo App",
     description:
-      "Simple and clean To-Do web app that lets users create, view, filter, edit, and delete tasks based on their status.",
+      "Developed a simple and clean To-Do web app for task management. Users can create, view, filter, edit, and delete tasks based on their status.",
     tags: [
       {
         name: "react",
@@ -401,8 +401,8 @@ const projects = [
     ],
     category: "Frontend Development",
     image: todo,
-    source_code_link: "https://github.com/samiudeen96/todo",
-    live_link: "",
+    source_code_link: "https://github.com/samiudeen96/To-Do",
+    live_link: "https://samiudeen96.github.io/To-Do",
   },
 ];
 
