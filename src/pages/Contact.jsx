@@ -59,8 +59,19 @@ const Contact = () => {
       >
         {inView && (
           <figure>
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31398.518481761374!2d79.36359410439539!3d10.356687768910618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afffe01f93954dd%3A0x45738afa24f38380!2sAdirampattinam%2C%20Tamil%20Nadu%20614701!5e0!3m2!1sen!2sin!4v1745723988928!5m2!1sen!2sin"
+              width="600"
+              height="400"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full rounded-md shadow-md"
+            ></iframe> */}
+
+            
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d3607.8736254564624!2d55.31255252504229!3d25.27483628545318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d25.274856175186013!2d55.312616610973606!5e0!3m2!1sen!2sae!4v1751875693681!5m2!1sen!2sae"
               width="600"
               height="400"
               allowFullScreen=""

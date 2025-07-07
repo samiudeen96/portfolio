@@ -204,13 +204,6 @@ const About = ({ text }) => {
               <div key={index} className="flex">
                 <div className="group card-container cursor-pointer">
                   <div className="card group-hover:rotate-y-180 shadow-sm rounded-md">
-                    {/* <div className="front">
-                      <img
-                        src={tech.icon}
-                        alt={tech.name}
-                        className="w-13 h-13 object-contain mx-auto"
-                      />
-                    </div> */}
                     <div className="front">
                       <motion.div
                         animate={{
