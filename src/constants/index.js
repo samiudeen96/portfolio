@@ -79,7 +79,7 @@ const socialMedia = [
   {
     img: WhatsApp,
     size: "sm:w-7 sm:h-7 w-10 h-10",
-    url: "https://wa.me/918148837858",
+    url: "https://wa.me/+971 502126746",
     type: "chat",
   },
 ];
@@ -89,13 +89,13 @@ const details = [
     name: "Contact",
     size: "w-5 h-5",
     img: phone,
-    content: "+91 8148837858",
+    content: " +971502126746",
   },
   {
     name: "Location",
     size: "w-7 h-7",
     img: location,
-    content: "Adirampattinam, India",
+    content: "Dubai, UAE",
   },
 ];
 
