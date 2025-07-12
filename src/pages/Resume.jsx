@@ -1,6 +1,4 @@
 
-
-import React from "react";
 import TimelineItem from "../components/TimelineItem";
 import { experiences, education } from "../constants";
 import exp from "../assets/exp.svg";

@@ -223,7 +223,7 @@ const technologies = [
 const experiences = [
   {
     id: 1,
-    title: "Front-End Developer / Internship",
+    title: "Front-End Developer",
     name: "ILIFE Technologies",
     url: "https://ilifetech.in/",
     icon: ilife,
